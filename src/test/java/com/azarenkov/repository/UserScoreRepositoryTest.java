@@ -144,38 +144,6 @@ public class UserScoreRepositoryTest extends RepositoryUtilTest {
 
     }
 
-    @Test
-    public void totalUserScore(){
-        Calendar end = Calendar.getInstance();
-        Calendar start = Calendar.getInstance();
-        Calendar outOfLastweek = Calendar.getInstance();
-        start.add(Calendar.DATE, -7);
-        outOfLastweek.add(Calendar.DATE, -10);
 
-        User user = create();
-        UserScore userScore = new UserScore();
-        userScore.setDate(start.getTime());
-        userScore.setId(1);
-        userScore.setScore(100);
-        userScore.setUser(user);
-        userScoreRepository.save(userScore);
-
-        UserScore userScoreUpdated = new UserScore();
-        userScoreUpdated.setId(2);
-        userScoreUpdated.setDate(end.getTime());
-        userScoreUpdated.setScore(100);
-        userScoreUpdated.setUser(user);
-        userScoreRepository.save(userScoreUpdated);
-
-        UserScore userScoreUpdatedTwice = new UserScore();
-        userScoreUpdatedTwice.setId(3);
-        userScoreUpdatedTwice.setDate(outOfLastweek.getTime());
-        userScoreUpdatedTwice.setScore(100);
-        userScoreUpdatedTwice.setUser(user);
-        userScoreRepository.save(userScoreUpdatedTwice);
-        assertEquals(300,userScoreRepository.totalUserScore(start.getTime(),outOfLastweek.getTime()));
-
-
-    }
 
 }

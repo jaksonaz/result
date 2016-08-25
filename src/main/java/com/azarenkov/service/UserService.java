@@ -27,9 +27,9 @@ public class UserService {
     private UserScoreRepository userScoreRepository;
 
 
-//    public User createUser() {
-//        return userRepository.save(new User());
-//    }
+    public User createUser() {
+        return userRepository.save(new User());
+    }
 
     public void deleteUser(long id) {
         userRepository.delete(id);

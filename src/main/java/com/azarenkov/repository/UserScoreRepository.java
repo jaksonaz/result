@@ -3,7 +3,6 @@ package com.azarenkov.repository;
 import com.azarenkov.model.UserScore;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.support.DomainClassConverter;
 
 import java.util.Date;
 import java.util.List;
@@ -29,9 +28,5 @@ public interface UserScoreRepository extends CrudRepository<UserScore, Long> {
             "GROUP BY user_id " +
             "ORDER BY SUM(score) DESC ",nativeQuery = true)
     List<Object[]> totalUserScore(Date start, Date end);
-
-
-
-
 
 }
