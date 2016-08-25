@@ -1,1 +1,4 @@
 .idea
+.gitignore
+target/generated-sources/
+target/generated-test-sources/
