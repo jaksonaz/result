@@ -1,5 +1,4 @@
 .idea
 .gitignore
-target/generated-sources/
-target/generated-test-sources/
-target/classes/log4j2.xml
+target/
+
