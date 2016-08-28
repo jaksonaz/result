@@ -2,3 +2,7 @@
 .gitignore
 resultApp-core.iml
 target/
+.mvn
+mvnw
+mvnw.cmd
+
